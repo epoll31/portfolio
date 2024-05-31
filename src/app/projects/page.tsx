@@ -65,6 +65,7 @@ export default function ProjectsPage() {
                 "Python",
               ],
               href: "/docs/mqp.pdf",
+              id: "mqp",
             }}
           />
           <ProjectCard
@@ -80,6 +81,7 @@ export default function ProjectsPage() {
                 "QR Codes",
               ],
               href: "/docs/iqp.pdf",
+              id: "iqp",
             }}
           />
         </div>
@@ -93,14 +95,19 @@ interface Project {
   description: string;
   tags: string[];
   href: string;
+  id?: string;
 }
 
 function ProjectCard({ project }: { project: Project }) {
   return (
-    <Link href={project.href}>
+    <Link
+      href={project.href}
+      id={project.id}
+      className="rounded-xl border border-gray-200 hover:shadow-lg transition-shadow duration-300 overflow-hidden"
+    >
       <GlowContainer
         whileHover
-        className="flex flex-col w-full h-full rounded-xl border border-gray-200 hover:shadow-lg transition-shadow duration-300"
+        className="flex flex-col w-full h-full rounded-none"
         glowRadius="800px"
       >
         <div className="p-4 flex flex-col gap-3 ">

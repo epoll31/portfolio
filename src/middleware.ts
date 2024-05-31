@@ -17,12 +17,20 @@ const redirects = [
     from: "/email",
     to: "mailto:epollack31@gmail.com",
   },
+  {
+    from: "/mqp",
+    to: "./projects#mqp",
+  },
+  {
+    from: "/iqp",
+    to: "./projects#iqp",
+  },
 ];
 
 export default function middleware(request: NextRequest) {
   for (const redirect of redirects) {
     if (request.nextUrl.pathname === redirect.from) {
-      return NextResponse.redirect(redirect.to);
+      return NextResponse.redirect(new URL(redirect.to, request.url));
     }
   }
 
