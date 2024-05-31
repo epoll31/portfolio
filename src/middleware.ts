@@ -13,6 +13,10 @@ const redirects = [
     from: "/twitter",
     to: "https://twitter.com/epoll31",
   },
+  {
+    from: "/email",
+    to: "mailto:epollack31@gmail.com",
+  },
 ];
 
 export default function middleware(request: NextRequest) {
