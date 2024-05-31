@@ -19,9 +19,7 @@ function Tab({ tab }: { tab: TabInfo }) {
     <Link
       href={tab.href}
       className={`${
-        isSelected
-          ? "text-white"
-          : "text-gray-500 hover:text-gray-900 dark:hover:text-gray-100"
+        isSelected ? "text-white" : "text-gray-500 hover:text-gray-900"
       } relative rounded-md px-2 py-1 text-sm font-medium transition-colors`}
     >
       <span className="relative z-10">{tab.title}</span>
@@ -46,7 +44,7 @@ export default function Tabs({
 }) {
   return (
     <div className="mb-8 flex flex-wrap items-center gap-2">
-      {tabs.map((tab, index) => (
+      {tabs.map((tab) => (
         <Tab tab={tab} key={tab.title} />
       ))}
     </div>
