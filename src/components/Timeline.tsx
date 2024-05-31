@@ -15,16 +15,16 @@ export default function Timeline({
       const curr = items[index]?.active;
 
       if (index === items.length - 1) {
-        return curr ? "bg-blue-300" : "bg-black";
+        return curr ? "bg-blue-300" : "bg-gray-400";
       }
 
       const next = items[index + 1]?.active;
 
-      const from = curr ? "blue-300" : "black";
+      const from = curr ? "blue-300" : "gray-400";
       const to =
         (curr && (next || index === items.length - 1)) || (!curr && next)
           ? "blue-300"
-          : "black";
+          : "gray-400";
 
       return `bg-gradient-to-b from-${from} to-${to} from-70% to-90%`;
     });
@@ -40,7 +40,7 @@ export default function Timeline({
           <span
             className={cn(
               `absolute top-0 left-0 w-0.5 h-full`,
-              "from-black to-black", // this is here to force TW to generate the classes
+              "from-gray-400 to-gray-400", // this is here to force TW to generate the classes
               "from-blue-300 to-blue-300", // this is here to force TW to generate the classes
               gradients[index],
               index === 0 ? ` rounded-t-full` : "",
@@ -50,11 +50,11 @@ export default function Timeline({
           />
           <span
             className={cn(
-              `absolute top-0 left-0 w-4 h-4 rounded-full border`,
+              `absolute top-[0.85ch] left-0 w-3 h-3 rounded-full border`,
               item.active
                 ? "bg-blue-300 border-blue-300"
-                : "bg-black border-black",
-              "-translate-x-1/2 translate-y-1/2",
+                : "bg-gray-400 border-gray-400",
+              "-translate-x-1/2",
               "group-hover/timeline-item:scale-110 transition-transform"
             )}
           />
