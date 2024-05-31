@@ -3,6 +3,7 @@ import Image from "next/image";
 import Links from "./links";
 import LinkedIn from "./icons/linkedin";
 import Twitter from "./icons/twitter";
+import MailFilled from "./icons/mail-filled";
 
 export default function Header() {
   return (
@@ -24,6 +25,10 @@ export default function Header() {
             {
               icon: <Twitter className="w-5 h-5" />,
               href: "/twitter",
+            },
+            {
+              icon: <MailFilled className="w-5 h-5" />,
+              href: "mailto:epollack31@gmail.com",
             },
           ]}
         />
