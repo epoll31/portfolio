@@ -7,7 +7,7 @@ import MailFilled from "./icons/mail-filled";
 
 export default function Header() {
   return (
-    <header className="bg-white border-b border-gray-200 flex justify-between gap-x-4 pb-4 mb-4">
+    <header className="bg-white border-b border-gray-200 flex justify-between gap-x-4 pb-8 mb-8">
       <div className="flex flex-col justify-center gap-2">
         <h1 className="text-3xl sm:text-5xl font-bold self-end ">
           Ethan Pollack
