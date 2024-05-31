@@ -50,6 +50,7 @@ export default function Home() {
               node: (
                 <TimelineItem
                   title="SyntaxUI"
+                  subTitle="Contributor"
                   year={"Feb 2022 - Present"}
                   about="I am a software engineer and a designer. I work on the web and mobile applications. I am a self-taught developer and I love to learn new things."
                 />
