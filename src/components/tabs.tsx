@@ -4,16 +4,20 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { useState } from "react";
 
-interface TabProps {
-  tab: {
-    title: string;
-    href: string;
-  };
-  selected: boolean;
-  setSelected: (tab: { title: string; href: string }) => void;
+export interface TabInfo {
+  title: string;
+  href: string;
 }
 
-function Tab({ tab, selected, setSelected }: TabProps) {
+function Tab({
+  tab,
+  selected,
+  setSelected,
+}: {
+  tab: TabInfo;
+  selected: boolean;
+  setSelected: (tab: TabInfo) => void;
+}) {
   return (
     <Link
       href={tab.href}
@@ -44,12 +48,11 @@ export default function Tabs({
     href: string;
   }[];
 }) {
-  const [selected, setSelected2] = useState<{
-    title: string;
-    href: string;
-  }>(tabs[0]);
-  const setSelected = (tab: { title: string; href: string }) => {
-    setSelected2(tab);
+  const [selected, setSelected2] = useState(
+    tabs.findIndex((tab) => tab.href === window.location.pathname)
+  );
+  const setSelected = (tab: TabInfo) => {
+    setSelected2(tabs.indexOf(tab));
   };
 
   return (
@@ -57,7 +60,7 @@ export default function Tabs({
       {tabs.map((tab, index) => (
         <Tab
           tab={tab}
-          selected={selected === tab}
+          selected={selected === index}
           setSelected={setSelected}
           key={tab.title}
         />
