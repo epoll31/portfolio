@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Tabs from "@/components/tabs";
+import cn from "@/utils/cn";
+import Header from "@/components/header";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -36,7 +38,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body
+        className={cn(
+          inter.className,
+          "flex flex-col min-h-screen max-w-prose mx-auto my-20"
+        )}
+      >
+        <Header />
         <Tabs tabs={tabs} />
         {children}
       </body>

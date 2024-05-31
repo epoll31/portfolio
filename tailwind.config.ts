@@ -15,6 +15,32 @@ const config: Config = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    function ({ addBase, theme }: any) {
+      const extractColorVars = (
+        colorObj: Record<string, string | Record<string, string>>,
+        colorGroup = ""
+      ): Record<string, string> => {
+        return Object.keys(colorObj).reduce((vars, colorKey) => {
+          const value = colorObj[colorKey];
+          const cssVariable =
+            colorKey === "DEFAULT"
+              ? `--color${colorGroup}`
+              : `--color${colorGroup}-${colorKey}`;
+
+          const newVars =
+            typeof value === "string"
+              ? { [cssVariable]: value }
+              : extractColorVars(value, `-${colorKey}`);
+
+          return { ...vars, ...newVars };
+        }, {} as Record<string, string>);
+      };
+
+      addBase({
+        ":root": extractColorVars(theme("colors")),
+      });
+    },
+  ],
 };
 export default config;
