@@ -41,7 +41,7 @@ export default function RootLayout({
       <body
         className={cn(
           inter.className,
-          "flex flex-col min-h-screen max-w-prose mx-auto my-20"
+          "flex flex-col min-h-screen max-w-prose mx-auto my-20 px-6"
         )}
       >
         <Header />
