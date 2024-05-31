@@ -1,5 +1,6 @@
 "use client";
 import cn from "@/utils/cn";
+import { motion } from "framer-motion";
 import { useMemo } from "react";
 
 export default function Timeline({
@@ -29,13 +30,14 @@ export default function Timeline({
       return `bg-gradient-to-b from-${from} to-${to} from-70% to-90%`;
     });
   }, [items]);
-
+  // TODO: finish the animations here
   return (
     <div className="flex flex-col w-full">
       {items.map((item, index) => (
-        <div
+        <motion.div
           key={index}
           className="relative px-4 [&:not(:last-child)]:pb-8 group/timeline-item"
+          whileHover={"hover"}
         >
           <span
             className={cn(
@@ -48,20 +50,37 @@ export default function Timeline({
               `-translate-x-1/2`
             )}
           />
-          <span
+          <motion.span
             className={cn(
-              `absolute top-[0.85ch] left-0 w-3 h-3 rounded-full border`,
-              item.active
-                ? "bg-blue-300 border-blue-300"
-                : "bg-gray-400 border-gray-400",
-              "-translate-x-1/2",
-              "group-hover/timeline-item:scale-110 transition-transform"
+              `absolute top-[0.85ch] left-0 w-3 h-3 rounded-full`,
+              item.active ? "bg-blue-300" : "bg-gray-400"
             )}
+            initial={{
+              translateX: "-50%",
+            }}
+            variants={
+              {
+                // hover: { scale: [1, 1.1, 1] },
+              }
+            }
+            transition={{ duration: 0.3, ease: "easeInOut" }}
           />
-          <div className="group-hover/timeline-item:scale-105 origin-left transition-transform">
+          <motion.div
+            initial={
+              {
+                // transformOrigin: "left",
+              }
+            }
+            variants={
+              {
+                // hover: { scale: [1, 1.02, 1] },
+              }
+            }
+            transition={{ duration: 0.3, ease: "easeInOut" }}
+          >
             {item.node}
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       ))}
     </div>
   );
