@@ -48,7 +48,7 @@ export default function Header() {
             priority
             src="/grad-headshot-close.png"
             width={100}
-            height={150}
+            height={100}
             alt="headshot"
             className="rounded-lg drop-shadow-xl"
           />
