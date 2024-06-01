@@ -22,13 +22,17 @@ const tabs = [
     href: "/projects",
   },
   {
-    title: "Test1",
-    href: "/test1",
+    title: "Library",
+    href: "/library",
   },
-  {
-    title: "Test2",
-    href: "/test2",
-  },
+  // {
+  //   title: "Tools",
+  //   href: "/tools",
+  // },
+  // {
+  //   title: "Utilities",
+  //   href: "/utilities",
+  // },
 ];
 
 export default function RootLayout({
