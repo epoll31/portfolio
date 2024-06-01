@@ -1,5 +1,8 @@
 import BounceIn from "@/components/effects/bounceIn";
 import GlowContainer from "@/components/glowContainer";
+import Pmndrs from "@/components/icons/pmndrs";
+import SyntaxUI from "@/components/icons/syntax-ui";
+import Image from "next/image";
 import Link from "next/link";
 
 export default function ProjectsPage() {
@@ -15,6 +18,7 @@ export default function ProjectsPage() {
                 "Get free access to pre-built, Tailwind CSS-powered components, animations and effects - brought to life using Framer Motion. Just copy, paste and you're ready to go! I am a core maintainer of this project.",
               tags: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
               href: "https://syntaxui.com",
+              icon: <SyntaxUI className="w-6 h-6" />,
             }}
           />
           <ProjectCard
@@ -30,6 +34,15 @@ export default function ProjectsPage() {
                 "GitHub API",
               ],
               href: "https://ossgallery.com",
+              icon: (
+                <Image
+                  src="/icons/oss-gallery.jpg"
+                  width={24}
+                  height={24}
+                  alt="oss-gallery logo"
+                  className="w-6 h-6 rounded-full"
+                />
+              ),
             }}
           />
           <ProjectCard
@@ -45,6 +58,7 @@ export default function ProjectsPage() {
                 "Three.js",
               ],
               href: "https://gltf.pmnd.rs/",
+              icon: <Pmndrs className="w-6 h-6" />,
             }}
           />
         </div>
@@ -96,6 +110,7 @@ interface Project {
   tags: string[];
   href: string;
   id?: string;
+  icon?: React.ReactNode;
 }
 
 function ProjectCard({ project }: { project: Project }) {
@@ -111,7 +126,10 @@ function ProjectCard({ project }: { project: Project }) {
         glowRadius="800px"
       >
         <div className="p-4 flex flex-col gap-3 ">
-          <h1 className="text-2xl font-semibold">{project.title}</h1>
+          <div className="flex gap-2 items-center">
+            {project.icon}
+            <h1 className="text-2xl font-semibold">{project.title}</h1>
+          </div>
           <p className="text-sm text-pretty">{project.description}</p>
           <div className="flex flex-wrap gap-2">
             {project.tags.map((tag) => (
