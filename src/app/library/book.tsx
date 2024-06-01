@@ -1,7 +1,6 @@
-// "use client";
+"use client";
 
 import Image from "next/image";
-// import { useState } from "react";
 
 export interface BookInfo {
   title: string;
@@ -11,10 +10,8 @@ export interface BookInfo {
 }
 
 export default function Book({ title, author, cover, subTitle }: BookInfo) {
-  // const [notLoaded, setNotLoaded] = useState(true);
-
   return (
-    <div className="w-[200px] h-[300px] rounded-lg overflow-hidden">
+    <div className="w-full h-full rounded-lg overflow-hidden">
       <Image
         src={cover}
         alt={title}
@@ -22,13 +19,6 @@ export default function Book({ title, author, cover, subTitle }: BookInfo) {
         height={300}
         className="w-full h-full"
       />
-      {/* {notLoaded && (
-        <div className="bg-gray-300 flex flex-col gap-2  items-center justify-center w-full h-full">
-          <h3 className="text-lg font-semibold">{title}</h3>
-          {subTitle && <p className="text-md">{subTitle}</p>}
-          <p className="text-sm">{author}</p>
-        </div>
-      )} */}
     </div>
   );
 }

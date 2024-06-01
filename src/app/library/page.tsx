@@ -1,6 +1,6 @@
 import BounceIn from "@/components/effects/bounceIn";
 import Image from "next/image";
-import { BookInfo } from "./book";
+import Book, { BookInfo } from "./book";
 
 const books2024: BookInfo[] = [
   {
@@ -51,16 +51,10 @@ export default function LibraryPage() {
         <ul className="flex flex-wrap gap-4">
           {books2024.map((book) => (
             <li
-              className="w-fit h-fit overflow-hidden rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300"
+              className="w-[120px] h-[180px] overflow-hidden rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300"
               key={book.title}
             >
-              <Image
-                src={book.cover}
-                alt={book.title}
-                width={200}
-                height={300}
-                className="w-[120px] h-[180px]"
-              />
+              <Book {...book} />
             </li>
           ))}
         </ul>
