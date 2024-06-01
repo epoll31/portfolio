@@ -19,10 +19,10 @@ function TimelineItem({
         <h4 className="text-lg font-semibold">{title}</h4>
         {subTitle && year ? (
           <span className="text-sm">
-            {subTitle} | {year}
+            <span className=" italic">{subTitle}</span> | {year}
           </span>
         ) : subTitle ? (
-          <span className="text-sm">{subTitle}</span>
+          <span className="text-sm italic">{subTitle}</span>
         ) : year ? (
           <span className="text-sm">{year}</span>
         ) : null}
@@ -63,7 +63,7 @@ export default function Home() {
                   title="The Coder School"
                   subTitle="Programming Instructor"
                   year={"March 2022 - Present"}
-                  about="I teach coding to kids of various ages."
+                  about="Teaching coding to kids of various ages. I love to share my knowledge and passion for programming."
                 />
               ),
             },
@@ -74,7 +74,7 @@ export default function Home() {
                   title="Epic Systems"
                   subTitle="Software Engineer Intern"
                   year={"May 2023 - Aug 2023"}
-                  about="I am a software engineer and a designer. I work on the web and mobile applications. I am a self-taught developer and I love to learn new things."
+                  about="Designed and developed a key component in the “MyChart” application using React and other web technologies."
                 />
               ),
             },
@@ -85,7 +85,7 @@ export default function Home() {
                   title="Epic Systems"
                   subTitle="Software Engineer Intern"
                   year={"May 2022 - Aug 2022"}
-                  about="I am a software engineer and a designer. I work on the web and mobile applications. I am a self-taught developer and I love to learn new things."
+                  about="Developed a project that improved “EpicCare Link” using React and other web technologies."
                 />
               ),
             },
@@ -96,7 +96,7 @@ export default function Home() {
                   title="Great Minds Robotics"
                   subTitle="Programming Instructor"
                   year={"May 2019 - Jul 2020"}
-                  about="I am a software engineer and a designer. I work on the web and mobile applications. I am a self-taught developer and I love to learn new things."
+                  about="Taught advanced programming classes and mentored junior robotics team members."
                 />
               ),
             },
@@ -112,7 +112,7 @@ export default function Home() {
                   title="Worcester Polytechnic Institute"
                   subTitle="BSCS"
                   year={"Aug 2020 - Dec 2023"}
-                  about="I am a software engineer and a designer. I work on the web and mobile applications. I am a self-taught developer and I love to learn new things."
+                  about="Focus areas: Programming Language Design, Software Development Techniques, Agile Methodologies, Game Dev."
                 />
               ),
             },
@@ -122,7 +122,7 @@ export default function Home() {
                 <TimelineItem
                   title="Database Comparison Research"
                   year={"May 2023 - Oct 2023"}
-                  about="I am a software engineer and a designer. I work on the web and mobile applications. I am a self-taught developer and I love to learn new things."
+                  about="Authored a research paper comparing various industry-standard databases."
                 />
               ),
             },
@@ -132,7 +132,7 @@ export default function Home() {
                 <TimelineItem
                   title="Augmented Reality Game Dev Research"
                   year={"Aug 2022 - Dec 2022"}
-                  about="I am a software engineer and a designer. I work on the web and mobile applications. I am a self-taught developer and I love to learn new things."
+                  about="Developed an interactive game promoting learning about the Nitrogen Life Cycle using computer vision and augmented reality."
                 />
               ),
             },
