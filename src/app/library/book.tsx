@@ -22,10 +22,11 @@ export default function Book({ title, cover, href }: BookInfo) {
         }}
       >
         <Image
+          priority
           src={cover}
           alt={title}
-          width={200}
-          height={300}
+          width={120}
+          height={180}
           className="w-full h-full"
         />
       </motion.div>
