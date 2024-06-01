@@ -4,6 +4,7 @@ import "./globals.css";
 import Tabs from "@/components/tabs";
 import cn from "@/utils/cn";
 import Header from "@/components/header";
+import Footer from "@/components/footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -37,12 +38,13 @@ export default function RootLayout({
       <body
         className={cn(
           inter.className,
-          "flex flex-col min-h-screen max-w-prose mx-auto my-20 px-6"
+          "flex flex-col min-h-screen max-w-prose mx-auto mt-20 px-6"
         )}
       >
         <Header />
         <Tabs tabs={tabs} />
         {children}
+        <Footer />
       </body>
     </html>
   );
