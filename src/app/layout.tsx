@@ -25,14 +25,6 @@ const tabs = [
     title: "Library",
     href: "/library",
   },
-  // {
-  //   title: "Tools",
-  //   href: "/tools",
-  // },
-  // {
-  //   title: "Utilities",
-  //   href: "/utilities",
-  // },
 ];
 
 export default function RootLayout({
