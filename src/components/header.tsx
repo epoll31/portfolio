@@ -12,7 +12,7 @@ export default function Header() {
   return (
     <header className="bg-white border-b border-gray-200 flex justify-between mb-8">
       <div className="flex flex-col justify-end items gap-2 pb-4 md:pb-8 ">
-        <h1 className="text-4xl sm:text-5xl font-bold self-end ">
+        <h1 className="text-4xl sm:text-5xl font-semibold self-end ">
           Ethan Pollack
         </h1>
         <Links
@@ -47,14 +47,6 @@ export default function Header() {
             maskImage: "linear-gradient(to bottom, #000000 80%, #00000000)",
           }}
         />
-
-        {/* <Image
-          src="/ep-cartoon.png"
-          alt="Ethan Pollack"
-          width={50}
-          height={200}
-          className="drop-shadow-xl"
-        /> */}
         <motion.span
           className="absolute top-[90%] left-0 w-full h-10 bg-gradient-to-br from-teal-400 to-teal-300 pointer-events-none"
           style={{
