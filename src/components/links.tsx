@@ -20,7 +20,7 @@ export default function Links({
             className="w-fit h-fit"
             initial={{
               scale: 1,
-              color: "var(--color-black)",
+              color: "var(--color-gray-500)",
               rotate: "0deg",
             }}
             whileHover={{
