@@ -9,6 +9,10 @@ export default function ProjectsPage() {
   return (
     <BounceIn>
       <div className="flex flex-col gap-4">
+        <p className="text-gray-500">
+          I enjoy contributing to various open-source projects and have
+          participated in multiple research studies at WPI.
+        </p>
         <h3 className="text-lg font-semibold -mb-2">Contributions</h3>
         <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
           <ProjectCard
