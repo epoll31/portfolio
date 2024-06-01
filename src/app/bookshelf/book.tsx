@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { useMemo } from "react";
 
 export interface BookInfo {
   title: string;
@@ -12,11 +13,39 @@ export interface BookInfo {
   href: string;
 }
 
-export default function Book({ title, cover, href }: BookInfo) {
+export default function Book({
+  title,
+  cover,
+  href,
+  size: rawSize,
+}: BookInfo & {
+  size: "large" | "small" | "medium";
+}) {
+  const size = useMemo(() => {
+    switch (rawSize) {
+      case "large":
+        return {
+          width: 120,
+          height: 180,
+        };
+      case "medium":
+        return {
+          width: 100,
+          height: 140,
+        };
+      case "small":
+        return {
+          width: 80,
+          height: 120,
+        };
+    }
+  }, [rawSize]);
+
   return (
     <Link href={href}>
       <motion.div
-        className="w-full h-full relative bg-transparent rounded-lg overflow-hidden"
+        className="relative bg-transparent rounded-lg overflow-hidden"
+        style={size}
         whileHover={{
           translateY: -5,
         }}
@@ -25,8 +54,7 @@ export default function Book({ title, cover, href }: BookInfo) {
           priority
           src={cover}
           alt={title}
-          width={120}
-          height={180}
+          {...size}
           className="w-full h-full"
         />
       </motion.div>
