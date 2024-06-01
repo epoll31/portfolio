@@ -1,7 +1,4 @@
-"use client";
 import cn from "@/utils/cn";
-import { motion } from "framer-motion";
-import { useMemo } from "react";
 
 export default function Timeline({
   items,
@@ -11,33 +8,31 @@ export default function Timeline({
     active: boolean;
   }[];
 }) {
-  const gradients = useMemo(() => {
-    return items.map((_, index) => {
-      const curr = items[index]?.active;
+  const gradients = items.map((_, index) => {
+    const curr = items[index]?.active;
 
-      if (index === items.length - 1) {
-        return curr ? "bg-blue-300" : "bg-gray-400";
-      }
+    if (index === items.length - 1) {
+      return curr ? "bg-blue-300" : "bg-gray-400";
+    }
 
-      const next = items[index + 1]?.active;
+    const next = items[index + 1]?.active;
 
-      const from = curr ? "blue-300" : "gray-400";
-      const to =
-        (curr && (next || index === items.length - 1)) || (!curr && next)
-          ? "blue-300"
-          : "gray-400";
+    const from = curr ? "blue-300" : "gray-400";
+    const to =
+      (curr && (next || index === items.length - 1)) || (!curr && next)
+        ? "blue-300"
+        : "gray-400";
 
-      return `bg-gradient-to-b from-${from} to-${to} from-70% to-90%`;
-    });
-  }, [items]);
+    return `bg-gradient-to-b from-${from} to-${to} from-70% to-90%`;
+  });
+
   // TODO: finish the animations here
   return (
     <div className="flex flex-col w-full">
       {items.map((item, index) => (
-        <motion.div
+        <div
           key={index}
           className="relative px-4 [&:not(:last-child)]:pb-8 group/timeline-item"
-          whileHover={"hover"}
         >
           <span
             className={cn(
@@ -50,37 +45,14 @@ export default function Timeline({
               `-translate-x-1/2`
             )}
           />
-          <motion.span
+          <span
             className={cn(
-              `absolute top-[0.85ch] left-0 w-3 h-3 rounded-full`,
+              `absolute top-[0.85ch] left-0 w-3 h-3 rounded-full -translate-x-1/2`,
               item.active ? "bg-blue-300" : "bg-gray-400"
             )}
-            initial={{
-              translateX: "-50%",
-            }}
-            variants={
-              {
-                // hover: { scale: [1, 1.1, 1] },
-              }
-            }
-            transition={{ duration: 0.3, ease: "easeInOut" }}
           />
-          <motion.div
-            initial={
-              {
-                // transformOrigin: "left",
-              }
-            }
-            variants={
-              {
-                // hover: { scale: [1, 1.02, 1] },
-              }
-            }
-            transition={{ duration: 0.3, ease: "easeInOut" }}
-          >
-            {item.node}
-          </motion.div>
-        </motion.div>
+          {item.node}
+        </div>
       ))}
     </div>
   );
