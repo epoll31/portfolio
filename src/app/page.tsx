@@ -1,4 +1,5 @@
 import BounceIn from "@/components/effects/bounceIn";
+import HoverScale from "@/components/effects/hoverScale";
 import Timeline from "@/components/timeline";
 import { ReactNode } from "react";
 
@@ -14,7 +15,7 @@ function TimelineItem({
   about: ReactNode;
 }) {
   return (
-    <div>
+    <HoverScale>
       <div className="flex items-center gap-2 flex-wrap">
         <h4 className="text-lg font-semibold">{title}</h4>
         {subTitle && year ? (
@@ -28,7 +29,7 @@ function TimelineItem({
         ) : null}
       </div>
       <p className="text-sm">{about}</p>
-    </div>
+    </HoverScale>
   );
 }
 
