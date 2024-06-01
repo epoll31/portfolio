@@ -152,12 +152,15 @@ const bookGroups: {
   },
 ];
 
-export default function LibraryPage() {
+export default function BookshelfPage() {
   return (
     <BounceIn>
       <div className="flex flex-col gap-4">
+        <p className=" text-gray-500">
+          Here are some of my favorite books, along with what I read each year.
+        </p>
         {bookGroups.map((group) => (
-          <>
+          <div className=" contents" key={group.title}>
             <h3 className="text-lg font-semibold -mb-2">{group.title}</h3>
             <ul className="flex flex-wrap gap-4">
               {group.books.map((book) => (
@@ -169,7 +172,7 @@ export default function LibraryPage() {
                 </li>
               ))}
             </ul>
-          </>
+          </div>
         ))}
       </div>
     </BounceIn>

@@ -23,8 +23,8 @@ const tabs = [
     href: "/projects",
   },
   {
-    title: "Library",
-    href: "/library",
+    title: "Bookshelf",
+    href: "/bookshelf",
   },
 ];
 
