@@ -38,6 +38,7 @@ export default function Header() {
       </div>
       <motion.div className="relative w-fit h-fit" whileHover={"hover"}>
         <Image
+          priority
           src="/headshot-no-bg.png"
           width={150}
           height={150}
