@@ -3,7 +3,8 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { useMemo } from "react";
+import { useMemo, useState } from "react";
+import cn from "@/utils/cn";
 
 export interface BookInfo {
   title: string;
@@ -41,6 +42,22 @@ export default function Book({
     }
   }, [rawSize]);
 
+  const [isLoading, setIsLoading] = useState(true);
+  const gradient = useMemo(() => {
+    const val = Math.random();
+    if (val < 0.2) {
+      return "from-red-300 to-red-200";
+    } else if (val < 0.4) {
+      return "from-green-300 to-green-200";
+    } else if (val < 0.6) {
+      return "from-blue-300 to-blue-200";
+    } else if (val < 0.8) {
+      return "from-purple-300 to-purple-200";
+    } else {
+      return "from-yellow-200 to-yellow-100";
+    }
+  }, []);
+
   return (
     <Link href={href}>
       <motion.div
@@ -51,12 +68,21 @@ export default function Book({
         }}
       >
         <Image
-          priority
+          // priority
           src={cover}
           alt={title}
           {...size}
           className="w-full h-full"
+          onLoadingComplete={() => setIsLoading(false)}
         />
+        {isLoading && (
+          <span
+            className={cn(
+              "absolute w-full h-full top-0 left-0 bg-gradient-to-tr z-50",
+              gradient
+            )}
+          />
+        )}
       </motion.div>
     </Link>
   );
