@@ -1,10 +1,10 @@
 "use client";
 
 import Link from "next/link";
-import { motion } from "framer-motion";
 import Image from "next/image";
 import { useEffect, useMemo, useState } from "react";
 import cn from "@/utils/cn";
+import HoverLift from "@/components/effects/hoverLift";
 
 export interface BookInfo {
   title: string;
@@ -62,7 +62,7 @@ export default function Book({
 
   return (
     <Link href={href} className="rounded-lg overflow-hidden">
-      <motion.div
+      <HoverLift
         className="relative bg-transparent rounded-lg overflow-hidden"
         style={size}
         whileHover={{
@@ -85,7 +85,7 @@ export default function Book({
             )}
           />
         )}
-      </motion.div>
+      </HoverLift>
     </Link>
   );
 }

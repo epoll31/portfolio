@@ -2,7 +2,7 @@
 
 import { MotionProps, motion } from "framer-motion";
 
-export default function HoverScale(
+export default function HoverLift(
   props: MotionProps & {
     className?: string;
   }
@@ -16,12 +16,7 @@ export default function HoverScale(
         damping: 30,
       }}
       whileHover={{
-        scale: [1, 1.05],
-        transformOrigin: "left",
-      }}
-      initial={{
-        scale: 1,
-        transformOrigin: "left",
+        translateY: -5,
       }}
       {...props}
     />
