@@ -10,7 +10,7 @@ import { motion } from "framer-motion";
 
 export default function Header() {
   return (
-    <header className="border-b border-gray-200 flex justify-between mb-8 pb-4">
+    <header className="border-b border-gray-200 dark:border-neutral-500 flex justify-between mb-8 pb-4">
       <div className="flex flex-col justify-center items gap-2">
         <h1 className="text-4xl sm:text-5xl font-semibold self-end ">
           Ethan Pollack
