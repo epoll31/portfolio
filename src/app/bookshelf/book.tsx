@@ -61,7 +61,7 @@ export default function Book({
   }, []);
 
   return (
-    <Link href={href}>
+    <Link href={href} className="rounded-lg overflow-hidden">
       <motion.div
         className="relative bg-transparent rounded-lg overflow-hidden"
         style={size}
