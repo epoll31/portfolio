@@ -11,6 +11,7 @@ export default function Footer() {
         style={{
           maskImage: "linear-gradient(to bottom, #000000 90%, #00000000)",
         }}
+        className=" dark:invert hover:scale-[180%] transition-all duration-300 ease-in-out origin-bottom"
       />
       <p className="text-sm font-light">© 2024 | Ethan Pollack</p>
     </footer>

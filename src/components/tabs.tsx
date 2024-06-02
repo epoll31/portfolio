@@ -19,7 +19,9 @@ function Tab({ tab }: { tab: TabInfo }) {
     <Link
       href={tab.href}
       className={`${
-        isSelected ? "text-white" : "text-gray-500 hover:text-gray-900"
+        isSelected
+          ? "text-white dark:text-black"
+          : "text-neutral-500 hover:text-neutral-900 dark:text-neutral-300 dark:hover:text-neutral-50"
       } relative rounded-md px-2 py-1 text-sm font-medium transition-colors`}
     >
       <span className="relative z-10">{tab.title}</span>
@@ -27,7 +29,7 @@ function Tab({ tab }: { tab: TabInfo }) {
         <motion.span
           layoutId="tab"
           transition={{ type: "spring", duration: 0.4 }}
-          className="absolute inset-0 z-0 rounded-md bg-black"
+          className="absolute inset-0 z-0 rounded-md bg-neutral-800 dark:bg-neutral-300"
         ></motion.span>
       )}
     </Link>
@@ -43,7 +45,7 @@ export default function Tabs({
   }[];
 }) {
   return (
-    <div className="mb-8 flex flex-wrap items-center gap-2">
+    <div className="flex flex-wrap items-center gap-2">
       {tabs.map((tab) => (
         <Tab tab={tab} key={tab.title} />
       ))}

@@ -10,7 +10,7 @@ import { motion } from "framer-motion";
 
 export default function Header() {
   return (
-    <header className="bg-white border-b border-gray-200 flex justify-between mb-8 pb-4">
+    <header className="border-b border-gray-200 dark:border-neutral-500 flex justify-between mb-8 pb-4">
       <div className="flex flex-col justify-center items gap-2">
         <h1 className="text-4xl sm:text-5xl font-semibold self-end ">
           Ethan Pollack
@@ -54,7 +54,7 @@ export default function Header() {
           />
         </motion.div>
         <motion.span
-          className="absolute top-[90%] left-0 w-full h-10 bg-gradient-to-br from-teal-400 to-teal-300 pointer-events-none"
+          className="absolute top-[90%] left-0 w-full h-10 bg-gradient-to-br from-teal-400 to-teal-300 pointer-events-none dark:opacity-60"
           style={{
             maskImage: `radial-gradient(ellipse 100% 50% at 50% 50%, #00000050 0%, transparent 50%)`,
           }}

@@ -5,6 +5,8 @@ import Tabs from "@/components/tabs";
 import cn from "@/utils/cn";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
+import ThemeToggle from "@/components/theme-toggle";
+import Providers from "./providers";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -38,13 +40,19 @@ export default function RootLayout({
       <body
         className={cn(
           inter.className,
-          "flex flex-col min-h-screen max-w-prose mx-auto mt-20 px-6"
+          "flex flex-col min-h-screen max-w-prose mx-auto mt-20 px-6",
+          "bg-white dark:bg-neutral-700"
         )}
       >
-        <Header />
-        <Tabs tabs={tabs} />
-        {children}
-        <Footer />
+        <Providers>
+          <Header />
+          <div className="flex justify-between items-center mb-8 ">
+            <Tabs tabs={tabs} />
+            <ThemeToggle />
+          </div>
+          {children}
+          <Footer />
+        </Providers>
       </body>
     </html>
   );

@@ -160,7 +160,7 @@ export default function BookshelfPage() {
   return (
     <BounceIn>
       <div className="flex flex-col gap-4">
-        <p className=" text-gray-500">
+        <p className="text-gray-500 dark:text-gray-300">
           Here are some of my favorite books, along with what I read each year.
         </p>
         {bookGroups.map((group) => (

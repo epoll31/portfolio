@@ -37,7 +37,7 @@ export default function Home() {
   return (
     <BounceIn>
       <div className="flex flex-col gap-4">
-        <p className=" text-gray-600">
+        <p className="text-gray-500 dark:text-gray-300">
           I am a software engineer and a designer. I work on the web and mobile
           applications. I am a self-taught developer and I love to learn new
           things.

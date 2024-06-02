@@ -9,7 +9,7 @@ export default function ProjectsPage() {
   return (
     <BounceIn>
       <div className="flex flex-col gap-4">
-        <p className="text-gray-500">
+        <p className="text-gray-500 dark:text-gray-300">
           I enjoy contributing to various open-source projects and have
           participated in multiple research studies at WPI.
         </p>
@@ -122,7 +122,7 @@ function ProjectCard({ project }: { project: Project }) {
     <Link
       href={project.href}
       id={project.id}
-      className="rounded-xl border border-gray-200 hover:shadow-lg transition-shadow duration-300 overflow-hidden"
+      className="rounded-xl border border-gray-200 dark:border-neutral-600 hover:shadow-lg transition-shadow duration-300 overflow-hidden"
     >
       <GlowContainer
         whileHover
@@ -138,7 +138,7 @@ function ProjectCard({ project }: { project: Project }) {
           <div className="flex flex-wrap gap-2">
             {project.tags.map((tag) => (
               <span
-                className="bg-gray-50 text-gray-600 px-1.5 rounded-full text-xs font-light italic "
+                className="bg-gray-50 dark:bg-transparent text-gray-600 dark:text-gray-400 dark:border border-neutral-600 px-1.5 rounded-md text-xs font-light italic "
                 key={tag}
               >
                 {tag}
