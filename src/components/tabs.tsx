@@ -43,7 +43,7 @@ export default function Tabs({
   }[];
 }) {
   return (
-    <div className="mb-8 flex flex-wrap items-center gap-2">
+    <div className="flex flex-wrap items-center gap-2">
       {tabs.map((tab) => (
         <Tab tab={tab} key={tab.title} />
       ))}
