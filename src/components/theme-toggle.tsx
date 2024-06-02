@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import Sun from "./icons/sun";
 import Moon from "./icons/moon";
 import { useTheme } from "next-themes";
+import { motion } from "framer-motion";
 
 export default function ThemeToggle() {
   const [mounted, setMounted] = useState(false);
@@ -16,15 +17,26 @@ export default function ThemeToggle() {
   if (!mounted) return null;
 
   return (
-    <button
+    <motion.button
       className="relative  w-5 h-5"
       onClick={() => setTheme(theme === "light" ? "dark" : "light")}
+      whileTap={"spin"}
     >
-      {theme === "light" ? (
-        <Sun className="absolute top-0 left-0 w-full h-full text-gray-500" />
-      ) : (
-        <Moon className="absolute top-0 left-0 w-full h-full text-gray-500" />
-      )}
-    </button>
+      <motion.div
+        className="absolute top-0 left-0 w-full h-full"
+        variants={{
+          spin: {
+            rotate: 180,
+            transition: {},
+          },
+        }}
+      >
+        {theme === "light" ? (
+          <Sun className="absolute top-0 left-0 w-full h-full" />
+        ) : (
+          <Moon className="absolute top-0 left-0 w-full h-full" />
+        )}
+      </motion.div>
+    </motion.button>
   );
 }
