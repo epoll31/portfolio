@@ -9,7 +9,7 @@ export default function ProjectsPage() {
   return (
     <BounceIn>
       <div className="flex flex-col gap-4">
-        <p className="text-gray-500">
+        <p className="text-gray-500 dark:text-gray-300">
           I enjoy contributing to various open-source projects and have
           participated in multiple research studies at WPI.
         </p>
