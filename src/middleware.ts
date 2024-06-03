@@ -25,12 +25,21 @@ const redirects = [
     from: "/iqp",
     to: "./projects#iqp",
   },
+  {
+    from: "/resume",
+    to: "./docs/resume.pdf",
+    rewrite: true,
+  },
 ];
 
 export default function middleware(request: NextRequest) {
   for (const redirect of redirects) {
     if (request.nextUrl.pathname === redirect.from) {
-      return NextResponse.redirect(new URL(redirect.to, request.url));
+      if (redirect.rewrite) {
+        return NextResponse.rewrite(new URL(redirect.to, request.url));
+      } else {
+        return NextResponse.redirect(new URL(redirect.to, request.url));
+      }
     }
   }
 
