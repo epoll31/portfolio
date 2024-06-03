@@ -1,5 +1,6 @@
 import BounceIn from "@/components/effects/bounceIn";
 import GlowContainer from "@/components/glowContainer";
+import NPM from "@/components/icons/npm";
 import Pmndrs from "@/components/icons/pmndrs";
 import SyntaxUI from "@/components/icons/syntax-ui";
 import Image from "next/image";
@@ -63,6 +64,19 @@ export default function ProjectsPage() {
               ],
               href: "https://gltf.pmnd.rs/",
               icon: <Pmndrs className="w-6 h-6" />,
+            }}
+          />
+        </div>
+        <h3 className="text-lg font-semibold  -mb-2">Side Projects</h3>
+        <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
+          <ProjectCard
+            project={{
+              title: "create-esp-app",
+              description:
+                "A CLI tool to create an opinionated Next.js app with TypeScript, Tailwind CSS, providers, configuration for robots and sitemap, icons, and helper functions.",
+              tags: ["Next.js", "TypeScript", "Tailwind CSS", "NPM CLI"],
+              href: "https://www.npmjs.com/package/create-esp-app",
+              icon: <NPM className="w-6 h-6" color="#cb3837" />,
             }}
           />
         </div>
