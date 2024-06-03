@@ -138,7 +138,7 @@ function ProjectCard({ project }: { project: Project }) {
           <div className="flex flex-wrap gap-2">
             {project.tags.map((tag) => (
               <span
-                className="bg-gray-50 dark:bg-transparent text-gray-600 dark:text-gray-400 dark:border border-neutral-600 px-1.5 rounded-md text-xs font-light italic "
+                className="bg-gray-50 dark:bg-transparent text-gray-600 dark:text-gray-400 border border-transparent dark:border-neutral-600 px-1 rounded-md text-xs font-light italic "
                 key={tag}
               >
                 {tag}
