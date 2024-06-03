@@ -91,7 +91,7 @@ export default function ProjectsPage() {
                 "Tailwind CSS",
                 "Three.js",
               ],
-              href: "https://github.com/epoll31/defense",
+              href: "https://tower-defense-sigma.vercel.app/",
               icon: (
                 <Image
                   src="/icons/defense.png"
