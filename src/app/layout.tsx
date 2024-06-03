@@ -13,6 +13,9 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Ethan Pollack",
   description: "A portfolio by Ethan Pollack",
+  icons: {
+    icon: "/favicon.ico",
+  },
 };
 
 const tabs = [
