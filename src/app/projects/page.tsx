@@ -1,5 +1,6 @@
 import BounceIn from "@/components/effects/bounceIn";
 import GlowContainer from "@/components/glowContainer";
+import Github from "@/components/icons/github";
 import NPM from "@/components/icons/npm";
 import Pmndrs from "@/components/icons/pmndrs";
 import SyntaxUI from "@/components/icons/syntax-ui";
@@ -77,6 +78,28 @@ export default function ProjectsPage() {
               tags: ["Next.js", "TypeScript", "Tailwind CSS", "NPM CLI"],
               href: "https://www.npmjs.com/package/create-esp-app",
               icon: <NPM className="w-6 h-6" color="#cb3837" />,
+            }}
+          />
+          <ProjectCard
+            project={{
+              title: "Tower Defense",
+              description:
+                "A simple tower defense game built with React-Three-Fiber, TypeScript, and Tailwind CSS. The game features a 3D camera, enemies, and weapons. The goal is to destroy all the enemies before they reach their target.",
+              tags: [
+                "React Three Fiber",
+                "TypeScript",
+                "Tailwind CSS",
+                "Three.js",
+              ],
+              href: "https://github.com/epoll31/defense",
+              icon: (
+                <Image
+                  src="/icons/defense.png"
+                  width={24}
+                  height={24}
+                  alt="defense logo"
+                />
+              ),
             }}
           />
         </div>
