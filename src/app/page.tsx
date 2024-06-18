@@ -83,6 +83,17 @@ export default function Home() {
               active: false,
               node: (
                 <TimelineItem
+                  title="Build-It-Yourself"
+                  subTitle="Lead Software Developer"
+                  year={"Oct 2022 - May 2023"}
+                  about="Online workshop teaching kids programming. Led a team maintaining the Invention Universe site for kids to share their creations."
+                />
+              ),
+            },
+            {
+              active: false,
+              node: (
+                <TimelineItem
                   title="Epic Systems"
                   subTitle="Software Engineer Intern"
                   year={"May 2022 - Aug 2022"}
