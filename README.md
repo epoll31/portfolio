@@ -28,7 +28,7 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ## Credits
 
-This design was based off of Ansub Khan's Minimalist Portfolio: [ansub.co](ansub.co).
+This design was based off of Ansub Khan's Minimalist Portfolio: [ansub.co](https://ansub.co).
 
 ---
 
