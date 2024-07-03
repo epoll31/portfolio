@@ -26,6 +26,10 @@ Feel free to reach out to me through any of the following platforms:
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
 
+## Credits
+
+This design was based off of Ansub Khan's Minimalist Portfolio: [ansub.co](ansub.co).
+
 ---
 
 Thank you for visiting my portfolio repository. If you have any questions or feedback, please don't hesitate to contact me.
