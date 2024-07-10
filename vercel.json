@@ -1,8 +1,0 @@
-{
-  "rewrites": [
-    {
-      "source": "/ico",
-      "destination": "https://ico-nu-one.vercel.app/"
-    }
-  ]
-}
