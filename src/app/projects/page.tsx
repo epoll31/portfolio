@@ -72,6 +72,29 @@ export default function ProjectsPage() {
         <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
           <ProjectCard
             project={{
+              title: "Ico Maker",
+              description:
+                "A simple way to interact with Ico files. Easily create, view, and edit Ico files. Built and designed by me using Next.js, TypeScript, Tailwind CSS, and Vercel.",
+              tags: [
+                "Ico Files",
+                "Next.js",
+                "TypeScript",
+                "Tailwind CSS",
+                "Vercel",
+              ],
+              href: "https://icomaker.app/",
+              icon: (
+                <Image
+                  src="/icons/icomaker.ico"
+                  width={24}
+                  height={24}
+                  alt="ico maker logo"
+                />
+              ),
+            }}
+          />
+          <ProjectCard
+            project={{
               title: "create-esp-app",
               description:
                 "A CLI tool to create an opinionated Next.js app with TypeScript, Tailwind CSS, providers, configuration for robots and sitemap, icons, and helper functions.",
@@ -163,7 +186,7 @@ function ProjectCard({ project }: { project: Project }) {
     >
       <GlowContainer
         whileHover
-        className="flex flex-col w-full h-full rounded-none"
+        className="flex flex-col w-full h-full rounded-none cursor-pointer"
         glowRadius="800px"
       >
         <div className="p-4 flex flex-col gap-3 ">
