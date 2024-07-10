@@ -50,10 +50,10 @@ export default function Home() {
               active: true,
               node: (
                 <TimelineItem
-                  title="SyntaxUI"
-                  subTitle="Contributor"
-                  year={"Feb 2022 - Present"}
-                  about="I am a software engineer and a designer. I work on the web and mobile applications. I am a self-taught developer and I love to learn new things."
+                  title="The Coder School"
+                  subTitle="Programming Instructor"
+                  year={"March 2022 - Present"}
+                  about="Teaching coding to kids of various ages. I love to share my knowledge and passion for programming."
                 />
               ),
             },
@@ -61,10 +61,10 @@ export default function Home() {
               active: true,
               node: (
                 <TimelineItem
-                  title="The Coder School"
-                  subTitle="Programming Instructor"
-                  year={"March 2022 - Present"}
-                  about="Teaching coding to kids of various ages. I love to share my knowledge and passion for programming."
+                  title="SyntaxUI"
+                  subTitle="Contributor"
+                  year={"Feb 2022 - Present"}
+                  about="I am a software engineer and a designer. I work on the web and mobile applications. I am a self-taught developer and I love to learn new things."
                 />
               ),
             },
