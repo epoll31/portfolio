@@ -46,12 +46,24 @@ const bookGroups: {
         cover: "/library/cosmos.png",
         href: "https://www.goodreads.com/book/show/55030.Cosmos",
       },
+      {
+        title: "Project Hail Mary",
+        author: "Andy Weir",
+        cover: "/library/project-hail-mary.png",
+        href: "https://www.goodreads.com/book/show/54493401-project-hail-mary",
+      },
     ],
   },
   {
     title: "2024",
     size: "medium",
     books: [
+      {
+        title: "Project Hail Mary",
+        author: "Andy Weir",
+        cover: "/library/project-hail-mary.png",
+        href: "https://www.goodreads.com/book/show/54493401-project-hail-mary",
+      },
       {
         title: "Clean Code",
         author: "Robert C. Martin",
