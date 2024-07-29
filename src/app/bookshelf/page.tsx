@@ -59,6 +59,12 @@ const bookGroups: {
     size: "medium",
     books: [
       {
+        title: "Wiseguy",
+        author: "Nicholas Pileggi",
+        cover: "/library/wiseguy.png",
+        href: "https://www.goodreads.com/book/show/158141.Wiseguy",
+      },
+      {
         title: "Project Hail Mary",
         author: "Andy Weir",
         cover: "/library/project-hail-mary.png",
