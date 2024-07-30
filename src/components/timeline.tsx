@@ -2,12 +2,24 @@ import cn from "@/utils/cn";
 
 export default function Timeline({
   items,
+  bringActiveItemsToTop,
 }: {
   items: {
     node: React.ReactNode;
     active: boolean;
   }[];
+  bringActiveItemsToTop?: boolean;
 }) {
+  const orderedItems = bringActiveItemsToTop ? items.sort((a, b) => {
+    if (a.active && !b.active) {
+      return -1; // a comes before b
+    } else if (!a.active && b.active) {
+      return 1; // b comes before a
+    } else {
+      return 0; // preserve original order
+    }
+  }) : items;
+
   const gradients = items.map((_, index) => {
     const curr = items[index]?.active;
 
@@ -29,7 +41,7 @@ export default function Timeline({
   // TODO: finish the animations here
   return (
     <div className="flex flex-col w-full">
-      {items.map((item, index) => (
+      {orderedItems.map((item, index) => (
         <div
           key={index}
           className="relative px-4 [&:not(:last-child)]:pb-8 group/timeline-item"

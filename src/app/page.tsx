@@ -45,14 +45,26 @@ export default function Home() {
 
         <h3 className="text-lg font-semibold ">Experience</h3>
         <Timeline
+          // bringActiveItemsToTop
           items={[
+            // {
+            //   active: true,
+            //   node: (
+            //     <TimelineItem
+            //       title="Apple"
+            //       subTitle="Apple Media Team"
+            //       year={"July 2024 - Present"}
+            //       about="I am a software engineer and a designer. I work on the web and mobile applications. I am a self-taught developer and I love to learn new things."
+            //     />
+            //   )
+            // },
             {
-              active: true,
+              active: false,
               node: (
                 <TimelineItem
                   title="The Coder School"
                   subTitle="Programming Instructor"
-                  year={"March 2022 - Present"}
+                  year={"March 2024 - July 2024"}
                   about="Teaching coding to kids of various ages. I love to share my knowledge and passion for programming."
                 />
               ),
@@ -63,7 +75,7 @@ export default function Home() {
                 <TimelineItem
                   title="SyntaxUI"
                   subTitle="Contributor"
-                  year={"Feb 2022 - Present"}
+                  year={"Feb 2024 - Present"}
                   about="I am a software engineer and a designer. I work on the web and mobile applications. I am a self-taught developer and I love to learn new things."
                 />
               ),
