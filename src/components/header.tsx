@@ -31,12 +31,12 @@ export default function Header() {
               href: "/twitter",
             },
             {
-              icon: <MailFilled className="w-5 h-5" />,
-              href: "mailto:epollack31@gmail.com",
-            },
-            {
               icon: <Peerlist className="w-5 h-5" />,
               href: "/peerlist",
+            },
+            {
+              icon: <MailFilled className="w-5 h-5" />,
+              href: "mailto:epollack31@gmail.com",
             }
           ]}
         />
