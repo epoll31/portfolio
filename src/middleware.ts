@@ -30,6 +30,10 @@ const redirects = [
     to: "./docs/resume.pdf",
     rewrite: true,
   },
+  {
+    from: "/peerlist",
+    to: "https://peerlist.io/ethan",
+  }
 ];
 
 export default function middleware(request: NextRequest) {

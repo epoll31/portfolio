@@ -7,6 +7,7 @@ import LinkedIn from "./icons/linkedin";
 import Twitter from "./icons/twitter";
 import MailFilled from "./icons/mail-filled";
 import { motion } from "framer-motion";
+import Peerlist from "./icons/peerlist";
 
 export default function Header() {
   return (
@@ -33,6 +34,10 @@ export default function Header() {
               icon: <MailFilled className="w-5 h-5" />,
               href: "mailto:epollack31@gmail.com",
             },
+            {
+              icon: <Peerlist className="w-5 h-5" />,
+              href: "/peerlist",
+            }
           ]}
         />
       </div>
