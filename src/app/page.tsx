@@ -47,17 +47,17 @@ export default function Home() {
         <Timeline
           // bringActiveItemsToTop
           items={[
-            // {
-            //   active: true,
-            //   node: (
-            //     <TimelineItem
-            //       title="Apple"
-            //       subTitle="Apple Media Team"
-            //       year={"July 2024 - Present"}
-            //       about="I am a software engineer and a designer. I work on the web and mobile applications. I am a self-taught developer and I love to learn new things."
-            //     />
-            //   )
-            // },
+            {
+              active: true,
+              node: (
+                <TimelineItem
+                  title="Contractor at Apple"
+                  subTitle="Software Developer"
+                  year={"July 2024 - Present"}
+                  about="Actively working on various internal tools and software. Utilizing various programming languages, frameworks, and tools to deliver high-quality software that improves internal workflows and processes."
+                />
+              )
+            },
             {
               active: false,
               node: (
