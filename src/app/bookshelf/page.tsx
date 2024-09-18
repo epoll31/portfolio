@@ -59,6 +59,12 @@ const bookGroups: {
     size: "medium",
     books: [
       {
+        title: "The Midnight Library",
+        author: "Matt Haig",
+        cover: "/library/the-midnight-library.jpg",
+        href: "https://www.goodreads.com/book/show/52578297-the-midnight-library",
+      },
+      {
         title: "Wiseguy",
         author: "Nicholas Pileggi",
         cover: "/library/wiseguy.png",
