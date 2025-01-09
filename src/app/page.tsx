@@ -51,9 +51,20 @@ export default function Home() {
               active: true,
               node: (
                 <TimelineItem
+                  title="UCLA Health"
+                  subTitle="Data Scientist & Web Developer"
+                  year="October 2024 - Present"
+                  about="I leverage a wide range of technologies, including SQL, Python, C#, .NET, Blazor, SSIS, DataBricks, and Tableau to drive data solutions and build web applications."
+                />
+              )
+            },
+            {
+              active: false,
+              node: (
+                <TimelineItem
                   title="Contractor at Apple"
                   subTitle="Software Developer"
-                  year={"July 2024 - Present"}
+                  year={"July 2024 - October 2024"}
                   about="Actively working on various internal tools and software. Utilizing various programming languages, frameworks, and tools to deliver high-quality software that improves internal workflows and processes."
                 />
               )
