@@ -4,7 +4,7 @@ const nextConfig = {
     return [
       {
         source: '/ocd',
-        destination: 'https://ocd-tracker-web-g0jtswrc9-epoll31s-projects.vercel.app',
+        destination: 'https://ocd-tracker-web-app.vercel.app',
       },
     ]
   },
