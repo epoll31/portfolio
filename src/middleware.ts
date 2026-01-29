@@ -33,6 +33,11 @@ const redirects = [
   {
     from: "/peerlist",
     to: "https://peerlist.io/ethan",
+  },
+  {
+    from: "/ocd",
+    to: "https://ocd-tracker-web-g0jtswrc9-epoll31s-projects.vercel.app",
+    rewrite: true
   }
 ];
 
