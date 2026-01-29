@@ -81,12 +81,12 @@ export default function Home() {
               ),
             },
             {
-              active: true,
+              active: false,
               node: (
                 <TimelineItem
                   title="SyntaxUI"
                   subTitle="Contributor"
-                  year={"Feb 2024 - Present"}
+                  year={"Feb 2024 - August 2025"}
                   about="I am a software engineer and a designer. I work on the web and mobile applications. I am a self-taught developer and I love to learn new things."
                 />
               ),
@@ -140,6 +140,17 @@ export default function Home() {
         <h3 className="text-lg font-semibold ">Education</h3>
         <Timeline
           items={[
+            {
+              active: true,
+              node: (
+                <TimelineItem
+                  title="UCLA"
+                  subTitle="MS in Data Science in Biomedicine"
+                  year={"Sep 2025 - Present"}
+                  about="Focus areas: Data Science, Machine Learning, Statistics, Data Mining, Algorithms, Analytics, Genomics, Electronic Health Records, Medical Imaging."
+                />
+              ),
+            },
             {
               active: false,
               node: (
