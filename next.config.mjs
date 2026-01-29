@@ -6,6 +6,10 @@ const nextConfig = {
         source: '/ocd',
         destination: 'https://ocd-tracker-web-app.vercel.app',
       },
+      {
+        source: '/ocd/:path*',
+        destination: 'https://ocd-tracker-web-app.vercel.app/:path*',
+      },
     ]
   },
 };
