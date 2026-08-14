@@ -34,7 +34,7 @@ export default function Footer() {
           className="hover:scale-[180%] transition-all duration-300 ease-in-out origin-bottom"
         />
       )}
-      <p className="text-sm font-light">© 2024 | Ethan Pollack</p>
+      <p className="text-sm font-light">© 2026 | Ethan Pollack</p>
     </footer>
   );
 }
