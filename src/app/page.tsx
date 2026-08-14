@@ -80,17 +80,17 @@ export default function Home() {
                 />
               ),
             },
-            {
-              active: false,
-              node: (
-                <TimelineItem
-                  title="SyntaxUI"
-                  subTitle="Contributor"
-                  year={"Feb 2024 - August 2025"}
-                  about="I am a software engineer and a designer. I work on the web and mobile applications. I am a self-taught developer and I love to learn new things."
-                />
-              ),
-            },
+            // {
+            //   active: false,
+            //   node: (
+            //     <TimelineItem
+            //       title="SyntaxUI"
+            //       subTitle="Contributor"
+            //       year={"Feb 2024 - August 2025"}
+            //       about="I am a software engineer and a designer. I work on the web and mobile applications. I am a self-taught developer and I love to learn new things."
+            //     />
+            //   ),
+            // },
             {
               active: false,
               node: (
