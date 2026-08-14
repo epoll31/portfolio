@@ -70,7 +70,7 @@ export default function ProjectsPage() {
         </div>
         <h3 className="text-lg font-semibold  -mb-2">Side Projects</h3>
         <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
-          <ProjectCard
+          {/* <ProjectCard
             project={{
               title: "Ico Maker",
               description:
@@ -92,7 +92,7 @@ export default function ProjectsPage() {
                 />
               ),
             }}
-          />
+          /> */}
           <ProjectCard
             project={{
               title: "create-esp-app",
